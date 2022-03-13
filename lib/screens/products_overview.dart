@@ -46,7 +46,7 @@ class _ProductsOverViewScreenState extends State<ProductsOverViewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('Products overview');
+    // print('Products overview');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Laalsa'),
