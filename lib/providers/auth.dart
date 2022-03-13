@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shop_app/global.dart';
 
 class Auth with ChangeNotifier {
   String? _token;
@@ -31,7 +32,7 @@ class Auth with ChangeNotifier {
   Future<String> _authenticate(
       String email, String password, String action) async {
     Uri url = Uri.parse(
-        'https://identitytoolkit.googleapis.com/v1/accounts:$action?key=AIzaSyDvn6Xp5YzTjHQ4thwUu2YlV0SRvJKPUco');
+        'https://identitytoolkit.googleapis.com/v1/accounts:$action?key=$key');
 
     final response = await http.post(
       url,
